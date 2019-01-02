@@ -1,0 +1,409 @@
+body{
+    background-color: #06182e;
+    overflow-x: hidden;
+    height: auto;
+}
+.wrapper {
+  position: relative;
+  *min-width: 1000px;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrap-bg01{
+    background: url("http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/bg01.jpg") center top no-repeat;
+    height: 1452px;
+}
+.wrap-bg02 {
+  background: url("http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/bg02.jpg") center top no-repeat;
+  max-height: 1080px;
+    height: auto;
+}
+
+/*header*/
+header,section{
+  position: relative;
+  *width: 1000px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding:60px 0 0;
+    
+}
+
+header h1 {
+  display: none;
+  height: 0;
+}
+.logo {
+  width: 235px;
+  margin: 0 auto;
+  text-align: center;
+}
+.title {
+  position: relative;
+  width: 664px;
+  margin: 540px auto 0;
+}
+.title p {
+  color: #c1aa87;
+    text-align: center;
+}
+.mobile{display: none; width: 100%; max-width: 980px;}
+
+.dragon{
+    height: 100%; width: 100%; position: absolute;left: 0;top: 8%; 
+    background: url("http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/dragon.png") no-repeat center top;
+    height: 715px;
+}
+.shake { -webkit-animation-name: shake; -webkit-animation-duration: 4s; -webkit-animation-timing-function: linear; -webkit-animation-iteration-count: infinite; -webkit-animation-direction: normal; animation-fill-mode: both; 
+}
+.dragon-light {display: inline-block; width: 351px; height: 169px; background: url("//game.gtimg.cn/images/lpl/es/2017worlds_hub/dragon-light.png") 0 0; position: absolute; top: 220px; right: 100px; -webkit-animation: light steps(80) 3s infinite;}
+
+/*dragon*/
+@keyframes shake {
+    0% { -webkit-transform: translateY(0px); }
+    25% { -webkit-transform: translateY(3px); }
+    50% { -webkit-transform: translateY(0px); }
+    75% { -webkit-transform: translateY(-3px); }
+    100% { -webkit-transform: translateY(0px); }
+}
+@keyframes light {
+    from {background: url("//game.gtimg.cn/images/lpl/es/2017worlds_hub/dragon-light.png") 0 0;}
+    to {background: url("//game.gtimg.cn/images/lpl/es/2017worlds_hub/dragon-light.png") -28080px 0;}
+}
+@media screen and (max-width: 980px) {
+    .dragon,.title-main{display: none;}
+    .mobile{display: block;}
+    .wrap-bg01{background: none; height: auto;}
+    .title{margin-top: 0; width: 90%; font-size: 0.85em;}
+    header,section{padding: 10px 0 0;}
+    .logo img{display: none; }
+    .logo, .logo a{width: 100%; height: 5%; position: absolute; top: 0; z-index: 99;}
+}
+
+.zoneInfo {
+  width: 960px;
+  margin: 75px auto 0;
+  color: #fff;
+  text-align: center;
+}
+
+.zoneInfo li{
+    display:table-cell;
+    text-align: center;
+    vertical-align:middle;
+    position: relative;
+    padding: 0 25px;
+    background: url("http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/btn_bg.png") repeat-x center;
+}
+.zoneInfo li:nth-child(2):hover,.zoneInfo li:nth-child(3):hover{
+    opacity:0.85;
+}
+.join-btn{
+    z-index: 2; position: relative;
+}
+.join-btn1 { 
+    top: -3px; left: 20px; width:auto; height: 100%;
+    animation: pulse 2s 3s ease both infinite;
+    position: absolute;
+    z-index: 1;
+}
+@media screen and (max-width: 980px) {
+    .zoneInfo {width: 100%; margin: 1.75em auto;}
+    .zoneInfo li{display: block; background: none;margin: 1em 0; padding: 0;}
+    .zoneInfo li img{width: 100%; max-width: 216px;}
+    .zoneInfo li:nth-child(2) img{width: 100%; max-width: 376px;}
+    
+}
+@media screen and (max-width: 375px){
+    .join-btn1{left: 0;}
+}
+
+
+/*start legend btn*/
+@keyframes toleft {
+    0% {-webkit-transform: translateX(50px); opacity:0;}
+    100% {-webkit-transform: translateX(0px); opacity:1;}
+}
+@keyframes pulse {
+    0% {-webkit-transform: scale(1); opacity: 0.65;}
+    100% {-webkit-transform: scale(1.2); opacity: 0;}
+}
+@keyframes arrowmove {
+    0% {transform: translateX(0); opacity: 1;}
+    25% {transform: translateX(56px); opacity: 0;}
+    30% {transform: translateX(-52px); opacity: 0;}
+    65% {transform: translateX(0px); opacity: 1;}
+}
+
+
+.zoneTitle{text-align: center;}
+.zoneQalist {
+  color: #fff;
+  font-size: 18px;
+  padding: 30px 0;
+  margin: 0 0 100px;
+}
+.zoneQalist ul {
+  padding: 16px 80px;
+}
+.zoneQalist ul>ul {
+  padding: 10px 30px;
+  list-style: circle;
+}
+.zoneQalist>ul>li:first-child:before, .zoneQalist>ul>li:first-child::before {
+  content: 'Q：';
+  color: #bc9b6a;
+}
+.zoneQalist>ul>li:first-child{color: #bc9b6a;}
+.zoneQalist>ul>li:nth-child(2):before, .zoneQalist>ul>li:nth-child(2)::before {
+  content: 'A：';
+}
+.zoneQalist ul li span {
+  color: #ffcc00;
+}
+@media screen and (max-width: 980px) {
+    .zoneQalist ul {  padding: 0.5em 15px;}
+    .zoneQalist {font-size: 0.85em; margin-bottom: 0; padding-top: 0.5em;}
+    .zoneQalist ul>ul {  padding: 0.25em 0 0 1.25em ;}
+}
+.btnRacecard {
+  position: fixed;
+  z-index: 9;
+  right: 20px;
+  top: 420px;
+  display: block;
+    z-index: 99;
+}
+.btnRacecard li{
+    width: 175px;
+    height: 60px;
+    text-align: center;
+    margin: 15px 0;
+     position: relative;
+    animation: blinkIn 1.5s 1.5s forwards;
+    
+}
+.btnRacecard li:before { 
+    content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0; 
+    background: #bc9b6a; transform: skew(-15deg); z-index: -1;
+    box-shadow:#325886 5px 5px;
+    transition:background 2s;
+}
+.btnRacecard li:hover{
+    opacity: 0.8;
+    
+    
+}
+.btnRacecard li a{
+    color: #fff;
+    font-size: 24px;
+    line-height: 2.35em;
+    font-style:italic;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 980px) {
+	.btnRacecard, .btnRacecard ul{
+		width: 100%;
+        bottom: 0;
+        top: auto;
+        right: auto;
+	}
+    .btnRacecard li{
+        display: table-cell;
+        /*width: 33%;*/
+        background: #bc9b6a;
+        padding-right: 0.25em;
+        height: 2em;        
+    }
+    .btnRacecard li:first-child,.btnRacecard li:nth-child(2){
+        border-right: dashed 1px #fff;
+    }
+    .btnRacecard li a{
+        font-size: 0.85em;
+        line-height: 3.25em;
+        padding: 0;
+        font-style: normal;
+    }
+    .btnRacecard li:before{display: none;}
+    .wrap-bg02{padding-bottom: 60px; background: none;}
+}
+
+
+.mask {
+	-webkit-mask: url(http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/mask.png);
+	        mask: url(http://cdn.garenanow.com/games/lol/tw/web/media/upload/2017worldsviewingparty/img/mask.png);
+	-webkit-mask-size: 3000% 100%;
+	        mask-size: 3000% 100%;
+	-webkit-mask-position: 0 0;
+	        mask-position: 0 0;
+	-webkit-animation: mask 2s steps(29) forwards;
+	        animation: mask 2s steps(29) forwards;
+	display: block;
+}
+.zIndex {
+	z-index: 10;
+}
+
+.fadeIn {
+	-webkit-animation: fadeIn .6s both;
+	        animation: fadeIn .6s both;
+	display: block;
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes mask {
+	from {
+		-webkit-mask-position: 0 0;
+		        mask-position: 0 0;
+	}
+	to {
+		-webkit-mask-position: 100% 0;
+		        mask-position: 100% 0;
+	}
+}
+
+@keyframes mask {
+	from {
+		-webkit-mask-position: 0 0;
+		        mask-position: 0 0;
+	}
+	to {
+		-webkit-mask-position: 100% 0;
+		        mask-position: 100% 0;
+	}
+}
+
+.zoneMask {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+   
+}
+.zoneRacecard {
+  max-width: 950px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #061729;
+  border: #c69f61 solid 1px;
+  color: #fff;
+  padding:0 5px 15px;
+}
+.zoneRacecard p{
+    text-align: center;
+    line-height: 2.5;
+    color: #c69f61 ;
+}
+.zoneclose {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+.btn_cancel {
+  position: absolute;
+  width: 40px;
+  right: 10px;
+    top: -50px;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: 0.6s;
+}
+.btn_cancel:hover {
+  -webkit-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.css-table .td, .css-table .th{
+	padding: 5px;
+}
+.css-table .td{
+	padding: 10px;
+	/*rder: #666666 1px solid;*/
+}
+.css-table .th{
+	background-color: #1a1a1a;
+	color:#ffffff;
+	border: #1a1a1a 1px solid;
+	text-align: center;
+}
+.css-table{
+	display: table;
+    margin: 0 auto;
+}
+.css-table .thead{
+	display:table-header-group;
+}
+.css-table .tbody{
+	display:table-row-group;
+}
+.css-table .tr{
+	display:table-row;
+}
+.css-table .tr:nth-child(even){
+	background: #11325a;
+}
+.css-table .th,
+.css-table .td{
+	display:table-cell;
+}
+
+@media only screen and (max-width: 960px) {
+	.css-table{
+		background-color: transparent;
+	}
+	.css-table .thead{
+		display: none;
+	}
+	.css-table .tr{
+		display:block;
+		margin-bottom: 5px;
+        padding: 5px 10px;
+	}
+	.css-table .th,
+	.css-table .td{
+		display:inline-block;
+		width: 48%;
+		border: none;
+        padding: 0;
+	}
+}
+@media only screen and (max-width: 720px) {
+    .css-table .th,
+	.css-table .td{
+		display:block;
+		width: 100%;
+	}
+}
